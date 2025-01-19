@@ -1,7 +1,7 @@
 import { NavigateFunction } from "react-router-dom";
 
 import { Item } from "./reducer";
-import { OrderInfo } from "src/pages/Cart";
+import { TOrderInfo } from "src/pages/Cart/formValidators";
 
 export enum ActionTypes {
   ADD_ITEM = "ADD_ITEM",
@@ -26,7 +26,7 @@ export type Actions =
   | {
       type: ActionTypes.CHECKOUT_CART;
       payload: {
-        order: OrderInfo;
+        order: TOrderInfo;
         callback: NavigateFunction;
       };
     };
@@ -60,7 +60,7 @@ export function decrementItemQuantityAction(itemId: Item["id"]) {
 }
 
 export function checkoutCartAction(
-  order: OrderInfo,
+  order: TOrderInfo,
   callback: NavigateFunction
 ) {
   return {

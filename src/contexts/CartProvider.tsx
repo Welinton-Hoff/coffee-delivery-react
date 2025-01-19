@@ -17,14 +17,14 @@ import {
   incrementItemQuantityAction,
 } from "src/reducers/cart/actions";
 
-import { OrderInfo } from "src/pages/Cart";
+import { TOrderInfo } from "src/pages/Cart/formValidators";
 import { cartReducer, Item, Order } from "src/reducers/cart/reducer";
 
 interface CartContextType {
   cart: Item[];
   orders: Order[];
   addItem: (item: Item) => void;
-  checkout: (order: OrderInfo) => void;
+  checkout: (order: TOrderInfo) => void;
   removeItem: (itemId: Item["id"]) => void;
   decrementItemQuantity: (itemId: Item["id"]) => void;
   incrementItemQuantity: (itemId: Item["id"]) => void;
@@ -65,7 +65,7 @@ export function CartContextProvider({
   }, []);
 
   const checkout = useCallback(
-    (order: OrderInfo) => {
+    (order: TOrderInfo) => {
       dispatch(checkoutCartAction(order, navigate));
     },
     [navigate]

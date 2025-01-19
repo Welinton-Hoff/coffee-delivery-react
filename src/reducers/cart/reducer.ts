@@ -1,14 +1,14 @@
 import { produce } from "immer";
 
-import { OrderInfo } from "src/pages/Cart";
 import { ActionTypes, Actions } from "./actions";
+import { TOrderInfo } from "src/pages/Cart/formValidators";
 
 export interface Item {
   id: string;
   quantity: number;
 }
 
-export interface Order extends OrderInfo {
+export interface Order extends TOrderInfo {
   id: number;
   items: Item[];
 }
