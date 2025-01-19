@@ -1,88 +1,29 @@
-import { CurrencyDollar, MapPin, Timer } from "@phosphor-icons/react";
-import { useTheme } from "styled-components";
 import { useParams } from "react-router-dom";
 
-import { useCart } from "../../hooks/useCart";
-import { Container, Heading, Info, InfoContent, Order } from "./styles";
+import { useCart } from "src/hooks/useCart";
+import { DeliveryDetails } from "./components/DeliveryDetails";
+
+import * as S from "./styles";
 
 export function Success() {
   const { orders } = useCart();
   const { orderId } = useParams();
   const orderInfo = orders.find((order) => order.id === Number(orderId));
-  const paymentMethod = {
-    credit: "Credit Card",
-    debit: "Debit Card",
-    cash: "Cash",
-  };
-  const theme = useTheme();
 
-  if (!orderInfo?.id) {
-    return null;
-  }
+  if (!orderInfo?.id) return null;
 
   return (
-    <Container>
-      <Order>
-        <Heading>
+    <S.Container>
+      <S.Order>
+        <S.Heading>
           <h2>Yay! Order confirmed</h2>
           <span>Now just wait for the coffee to reach you soon</span>
-        </Heading>
+        </S.Heading>
 
-        <Info>
-          <InfoContent>
-            <div>
-              <MapPin
-                color={theme.colors.white}
-                style={{ backgroundColor: theme.colors.purple }}
-                size={32}
-              />
-
-              <div>
-                <span>
-                  Delivery at{" "}
-                  <strong>
-                    {orderInfo.street}, {orderInfo.number}
-                  </strong>
-                </span>
-
-                <span>
-                  {orderInfo.neighborhood} - {orderInfo.city}, {orderInfo.state}
-                </span>
-              </div>
-            </div>
-
-            <div>
-              <Timer
-                color={theme.colors.white}
-                style={{ backgroundColor: theme.colors.yellow }}
-                size={32}
-              />
-
-              <div>
-                <span>Estimated delivery time</span>
-
-                <strong>20 min - 30 min</strong>
-              </div>
-            </div>
-
-            <div>
-              <CurrencyDollar
-                color={theme.colors.white}
-                style={{ backgroundColor: theme.colors["yellow-dark"] }}
-                size={32}
-              />
-
-              <div>
-                <span>Payment on delivery</span>
-
-                <strong>{paymentMethod[orderInfo.paymentMethod]}</strong>
-              </div>
-            </div>
-          </InfoContent>
-        </Info>
-      </Order>
+        <DeliveryDetails {...orderInfo} />
+      </S.Order>
 
       <img src="/images/delivery.svg" alt="Order completed" />
-    </Container>
+    </S.Container>
   );
 }
