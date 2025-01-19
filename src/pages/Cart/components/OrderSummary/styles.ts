@@ -21,20 +21,20 @@ export const Container = styled.div`
 export const CartTotal = styled.div`
   width: 100%;
   padding: 2.5rem;
-  min-width: 448px;
+  min-width: 28rem;
   border-radius: 6px 36px;
   background-color: ${({ theme }) => theme.colors["base-card"]};
 
   > span {
-    height: 1px;
-    margin: 24px 0;
+    height: 0.0625rem;
+    margin: 1.5rem 0;
     display: block;
     background-color: ${({ theme }) => theme.colors["base-button"]};
   }
 `;
 
 export const CartTotalInfo = styled.div`
-  gap: 12px;
+  gap: 0.75rem;
   display: flex;
   flex-direction: column;
 
@@ -66,11 +66,11 @@ export const Coffee = styled.div`
 
   > div {
     > img {
-      width: 64px;
-      height: 64px;
+      width: 4rem;
+      height: 4rem;
     }
 
-    gap: 20px;
+    gap: 1.25rem;
     display: flex;
     align-items: stretch;
 
@@ -87,13 +87,13 @@ export const Coffee = styled.div`
 `;
 
 export const CoffeeInfo = styled.div`
-  gap: 8px;
+  gap: 0.5rem;
   display: flex;
 
   > button {
-    gap: 8px;
+    gap: 0.5rem;
     display: flex;
-    padding: 6px 8px;
+    padding: 0.375rem 0.5rem;
     border-radius: 6px;
     align-items: center;
     background-color: ${({ theme }) => theme.colors["base-button"]};
@@ -118,8 +118,8 @@ export const CoffeeInfo = styled.div`
 
 export const CheckoutButton = styled.button`
   width: 100%;
-  padding: 12px;
-  margin-top: 24px;
+  padding: 0.75rem;
+  margin-top: 1.5rem;
   border-radius: 6px;
   text-transform: uppercase;
 

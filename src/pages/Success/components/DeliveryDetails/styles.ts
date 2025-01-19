@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  border: 1px solid;
-  border-radius: 6px 36px;
+  border: 0.0625rem solid;
   border-color: transparent;
   background-origin: border-box;
+  border-radius: 0.375rem 2.25rem;
   background-image: ${({ theme }) =>
     `linear-gradient(to bottom right, ${theme.colors.yellow}, ${theme.colors.purple})`};
 `;
@@ -16,7 +16,7 @@ export const Content = styled.div`
   padding: 2.5rem;
   flex-direction: column;
   background-color: white;
-  border-radius: 6px 36px;
+  border-radius: 0.375rem 2.25rem;
 
   > div {
     gap: 0.75rem;
@@ -24,7 +24,7 @@ export const Content = styled.div`
     align-items: center;
 
     > svg {
-      padding: 8px;
+      padding: 0.5rem;
       border-radius: 999px;
     }
   }

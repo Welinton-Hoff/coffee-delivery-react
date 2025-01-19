@@ -6,14 +6,14 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   padding: 2.5rem;
-  min-width: 640px;
+  min-width: 40rem;
   border-radius: 6px;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors["base-card"]};
 `;
 
 export const Heading = styled.div`
-  gap: 8px;
+  gap: 0.5rem;
   display: flex;
 
   div {
@@ -32,12 +32,12 @@ export const Heading = styled.div`
 `;
 
 export const PaymentOptions = styled.div`
-  gap: 8px;
+  gap: 0.5rem;
   display: flex;
   flex-direction: column;
 
   > div {
-    gap: 12px;
+    gap: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
