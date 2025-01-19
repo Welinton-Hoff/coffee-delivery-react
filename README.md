@@ -18,8 +18,8 @@ This project is a practice for building an e-commerce-like application using Rea
 ## Tech Stack
 
 - **React**: A JavaScript library for building user interfaces
-- **JavaScript**: A versatile programming language
-- **CSS**: For styling the app
+- **TypeScript**: A versatile programming language
+- **Styled-Components**: For styling the app
 - **React Context API**: For managing global state (cart management)
 
 ## Installation
