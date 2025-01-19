@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Coffee Delivery React
 
-Currently, two official plugins are available:
+A React application that simulates an online coffee delivery service. The app allows users to browse a selection of coffee options, add items to their cart, and proceed to checkout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## Expanding the ESLint configuration
+This project is a practice for building an e-commerce-like application using React. It includes features such as viewing coffee products, managing a shopping cart, and a checkout process. The goal is to create a user-friendly and responsive UI for an online coffee delivery service.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Browse a selection of coffee products
+- Add coffee items to the cart
+- View cart contents and modify quantities
+- Proceed to checkout with a simple user flow
+- Clean and responsive UI
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech Stack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **React**: A JavaScript library for building user interfaces
+- **JavaScript**: A versatile programming language
+- **CSS**: For styling the app
+- **React Context API**: For managing global state (cart management)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Installation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Welinton-Hoff/coffee-delivery-react.git
+   ```
+
+2. Navigate into the project folder:
+
+   ```bash
+   cd coffee-delivery-react
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+   The app will run on `http://localhost:3000`.
+
+## Usage
+
+1. Browse through the available coffee options.
+2. Add items to your cart by clicking the "Add to Cart" button.
+3. View your cart at any time by clicking the cart icon.
+4. Adjust the quantities of items in your cart if necessary.
+5. Proceed to checkout for a simple order review.
